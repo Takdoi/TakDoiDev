@@ -1,10 +1,15 @@
-import os
 from flask import Flask, render_template, request, redirect, url_for
+from jinja2 import BaseLoader, Template
 
 app = Flask(__name__)
 
-# Configuração do diretório de templates
-app.template_folder = "https://uncovered-amazing-cucumber.glitch.me/"
+class GlitchLoader(BaseLoader):
+    def get_source(self, environment, template):
+        url = f'https://uncovered-amazing-cucumber.glitch.me/{template}'
+        response = requests.get(url)
+        return response.text, url, lambda: True
+
+app.jinja_env.loader = GlitchLoader()
 
 class Participante:
     def __init__(self, nome, idade, endereco, reside_em_sp):
