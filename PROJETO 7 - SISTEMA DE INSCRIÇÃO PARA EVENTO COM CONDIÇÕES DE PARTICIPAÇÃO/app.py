@@ -4,8 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 # Configuração do diretório de templates
-template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
-app.template_folder = template_dir
+app.template_folder = "https://uncovered-amazing-cucumber.glitch.me/"
 
 class Participante:
     def __init__(self, nome, idade, endereco, reside_em_sp):
