@@ -1,0 +1,8 @@
+runtime: python39  # substitua pela versão do Python que você está usando
+entrypoint: gunicorn -b :$PORT "Sistema de Inscrição para Evento com Condições de Participação:app"
+
+instance_class: F2
+
+env_variables:
+  VARIABLE_1: valor1
+  VARIABLE_2: valor2
