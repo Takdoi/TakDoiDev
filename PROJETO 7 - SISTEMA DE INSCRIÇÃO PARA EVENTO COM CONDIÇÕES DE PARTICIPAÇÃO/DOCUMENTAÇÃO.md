@@ -39,13 +39,13 @@ Este projeto faz parte do curso baseado em Python do Programa Match!, representa
 ### 3.2 Artefatos Visuais
 
 - **3.2.1 Fluxograma**
-imagem:Classe UML.py.png
+[imagem:Classe UML.py.png](https://github.com/Takdoi/TakDoiDev/blob/main/PROJETO%207%20-%20SISTEMA%20DE%20INSCRI%C3%87%C3%83O%20PARA%20EVENTO%20COM%20CONDI%C3%87%C3%95ES%20DE%20PARTICIPA%C3%87%C3%83O/imagens/Classe%20UML%20app.py.png)
 - **3.2.2 Diagrama de Caso de Uso**
-imagem:Diagrama de Caso de Uso Projeto 7.png
+[imagem:Diagrama de Caso de Uso Projeto 7.png](https://github.com/Takdoi/TakDoiDev/blob/main/PROJETO%207%20-%20SISTEMA%20DE%20INSCRI%C3%87%C3%83O%20PARA%20EVENTO%20COM%20CONDI%C3%87%C3%95ES%20DE%20PARTICIPA%C3%87%C3%83O/imagens/Diagrama%20de%20Caso%20de%20Uso%20Projeto%207.png)
 - **3.2.3 UML Simples**
-imagem:Estrutura do Código em UML do Flask.png
+[imagem:Estrutura do Código em UML do Flask.png](https://github.com/Takdoi/TakDoiDev/blob/main/PROJETO%207%20-%20SISTEMA%20DE%20INSCRI%C3%87%C3%83O%20PARA%20EVENTO%20COM%20CONDI%C3%87%C3%95ES%20DE%20PARTICIPA%C3%87%C3%83O/imagens/Estrutura%20do%20C%C3%B3digo%20em%20UML%20do%20Flask.png)
 - **3.2.4 Diagrama UML Extra visualizar_cadastro**
-imagem:Diagrama UML da estrutura visualizar_cadastro.png
+[imagem:Diagrama UML da estrutura visualizar_cadastro.png](https://github.com/Takdoi/TakDoiDev/blob/main/PROJETO%207%20-%20SISTEMA%20DE%20INSCRI%C3%87%C3%83O%20PARA%20EVENTO%20COM%20CONDI%C3%87%C3%95ES%20DE%20PARTICIPA%C3%87%C3%83O/imagens/Diagrama%20UML%20da%20estrutura%20visualizar_cadastro.png)
 
 ## 4. Competências Adquiridas
 
