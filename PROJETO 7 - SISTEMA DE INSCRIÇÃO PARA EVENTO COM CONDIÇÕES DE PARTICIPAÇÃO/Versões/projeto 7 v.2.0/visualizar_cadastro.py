@@ -9,12 +9,12 @@ class SistemaInscricaoEvento:
         self.root.title("Sistema de Inscrição para Evento")
         self.root.geometry("400x300")
 
-        # ... (same as your existing code)
-
+    # condicionando o código de atribuição 
+        
         self.visualizar_button = tk.Button(root, text="Visualizar Cadastro", command=self.visualizar_cadastro)
         self.visualizar_button.pack()
 
-    # ... (existing methods)
+    # aplicando os métodos 
 
     def visualizar_cadastro(self):
         # Create an instance of VisualizarCadastro
