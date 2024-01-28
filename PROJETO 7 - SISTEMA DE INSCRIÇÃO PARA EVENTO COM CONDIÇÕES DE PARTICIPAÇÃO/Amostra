@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inscrição para Evento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .alert-danger {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+
+        .alert-success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sistema de Inscrição para Evento</h1>
+
+    <form id="inscricaoForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" required>
+
+        <label for="spResidencia">Reside em SP:</label>
+        <input type="checkbox" id="spResidencia">
+
+        <label for="horarioDisponivel">Pode comparecer à noite:</label>
+        <input type="checkbox" id="horarioDisponivel">
+
+        <button type="button" onclick="verificarInscricao()">Enviar Inscrição</button>
+    </form>
+
+    <div id="feedback" class="alert" style="display:none;"></div>
+
+    <script>
+        function verificarInscricao() {
+            // Obter valores do formulário
+            var nome = document.getElementById('nome').value;
+            var idade = parseInt(document.getElementById('idade').value);
+            var endereco = document.getElementById('endereco').value;
+            var spResidencia = document.getElementById('spResidencia').checked;
+            var horarioDisponivel = document.getElementById('horarioDisponivel').checked;
+
+            // Condições de participação
+            var validacao = true;
+            var mensagem = '';
+
+            if (idade < 18) {
+                validacao = false;
+                mensagem += 'A participação é restrita a maiores de idade.<br>';
+            }
+
+            if (!spResidencia) {
+                validacao = false;
+                mensagem += 'A participação é restrita a moradores de São Paulo.<br>';
+            }
+
+            if (!horarioDisponivel) {
+                validacao = false;
+                mensagem += 'Os participantes devem atestar que o evento ocorre à noite.<br>';
+            }
+
+            // Verificação de vagas disponíveis (limite de 50)
+            var vagasDisponiveis = 50; // Definir o limite de vagas
+            if (vagasDisponiveis <= 0) {
+                validacao = false;
+                mensagem += 'Desculpe, as inscrições estão encerradas.<br>';
+            }
+
+            // Exibir feedback ao usuário
+            var feedbackElement = document.getElementById('feedback');
+            feedbackElement.innerHTML = mensagem;
+
+            if (validacao) {
+                feedbackElement.className = 'alert alert-success';
+                feedbackElement.innerHTML = 'Inscrição validada com sucesso!';
+            } else {
+                feedbackElement.className = 'alert alert-danger';
+            }
+
+            feedbackElement.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
